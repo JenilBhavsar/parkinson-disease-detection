@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<br>
+<section class="breadcrumbs-section">
+  <div class="container p-1 p-sm-3">
+    <div class="row">
+      <div class="col-12">
+        <h2>Dashboard</h2>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Profile</li>
+        </ol>
+        <h3>Welcome {{session.username}}</h3>
+      </div>
+    </div>
+  </div>
+</section>
+<form method="get" action="profile" name="form1"></form>
+<div class="container">
+  Your keystrokes are being analyzed. Once we have recorded enough keystrokes, our model will display
+  the results under your profile
+</div>
+
+<!--<div class="container">
+        <div>
+            <table>    
+                {% for key, value in result.items() %}
+                <tr>
+                    <td>
+                        {{ key }}
+                        {{ value }}
+                    </td>
+                </tr> 
+                {% endfor %}
+            </table>
+        </div>-->
+
+<div class="container">
+  <table>
+    {% for key, value in result.items() %}
+    <tr>
+      <td>
+        {{ key }}
+        {{ value }}
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+
+
+
+<script>window.onload = function () {
+    window.setTimeout(function () { document.form1.submit(); }, 5000);
+  };
+</script>
+{% endblock %}

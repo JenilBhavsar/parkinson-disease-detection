@@ -1,0 +1,78 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<br>
+<section class="breadcrumbs-section">
+    <div class="container p-1 p-sm-3">
+        <div class="row">
+            <div class="col-12">
+                <h2>Register</h2>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Register</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<div class="container">
+    <form action="/register" method="post">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" id="reg_id" name="username" class="form-control" placeholder="Name"
+                        required="required">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="reg_pass" name="password" class="form-control" placeholder="Password"
+                        required="required">
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Gender</label>
+                    <input type="text" id="gender" class="form-control" name="gen" placeholder="Gender"
+                        required="required">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Age</label>
+                    <input type="text" id="age" class="form-control" name="age" placeholder="Age" required="required">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Contact</label>
+                    <input type="numeric" id="Contact_no" class="form-control" name="contact" placeholder="Contact"
+                        required="required">
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Register</button>
+        <br>
+    </form>
+</div>
+{% endblock %}
